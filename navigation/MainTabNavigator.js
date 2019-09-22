@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import WebScreen from '../screens/WebScreen';
+import ImageScreen from '../screens/ImageScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 import RssScreen from '../screens/RssFeedScreen';
@@ -90,6 +91,22 @@ RSSStack.path = '';
 //end
 
 
+//ImageScreen
+const ImageStack = createStackNavigator(
+  {
+    Links: ImageScreen,
+  },
+  config
+);
+ImageStack.navigationOptions = {
+  tabBarLabel: 'Image Screen',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
+  ),
+};
+ImageStack.path = '';
+//end
+
 const SettingsStack = createStackNavigator(
   {
     Settings: SettingsScreen,
@@ -111,7 +128,8 @@ const tabNavigator = createBottomTabNavigator({
   LinksStack,
   WebStack,
   SettingsStack,
-  RSSStack
+  RSSStack,
+  ImageStack
 });
 
 tabNavigator.path = '';
