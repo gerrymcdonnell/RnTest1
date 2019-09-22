@@ -130,7 +130,11 @@ const tabNavigator = createBottomTabNavigator({
   SettingsStack,
   RSSStack,
   ImageStack
-});
+},
+{
+  initialRouteName: "ImageStack"
+}
+);
 
 tabNavigator.path = '';
 

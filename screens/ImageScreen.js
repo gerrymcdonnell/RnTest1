@@ -2,6 +2,13 @@ import React from 'react';
 import { Image,Text,ScrollView, StyleSheet } from 'react-native';
 
 export default function ImageScreen() {
+    state = {
+        images: [
+          { title: 'kelly Brook', path: '../img/1.jpg' } 
+        ],
+        images2: [ '../img/1.jpg']
+      };
+
   return (
     <ScrollView style={styles.container}>
      
@@ -14,8 +21,17 @@ export default function ImageScreen() {
           source={{uri: 'https://facebook.github.io/react-native/img/tiny_logo.png'}}
         />
 
-        <Image source={require('../img/1.jpg')}  style={{width: 400, height: 400}} />
-        <Image source={require('../img/1.jpg')}  style={{width: 400, height: 400}} />
+<Text>
+    How to pass variable or array element to image?
+</Text>
+
+<Image source={require('../img/1.jpg')}  style={{width: 200, height: 200}} />
+        
+        <Text>State examples
+            Images array1 {this.state.images[0].path}
+            Images2 array{this.state.images2[0]}
+        </Text>
+        
 
 
 
