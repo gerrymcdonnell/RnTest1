@@ -5,6 +5,7 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
+import LinksScreen2 from '../screens/LinksScreen2';
 import WebScreen from '../screens/WebScreen';
 import ImageScreen from '../screens/ImageScreen';
 import SettingsScreen from '../screens/SettingsScreen';
@@ -41,21 +42,39 @@ HomeStack.navigationOptions = {
 
 HomeStack.path = '';
 
+//links
 const LinksStack = createStackNavigator(
   {
     Links: LinksScreen,
   },
   config
 );
-
 LinksStack.navigationOptions = {
   tabBarLabel: 'Links',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
   ),
 };
-
 LinksStack.path = '';
+//end of links
+
+
+//links2
+const LinksStack2 = createStackNavigator(
+  {
+    Links: LinksScreen2,
+  },
+  config
+);
+LinksStack2.navigationOptions = {
+  tabBarLabel: 'Links2',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
+  ),
+};
+LinksStack2.path = '';
+//end of links2
+
 
 //new web screen
 const WebStack = createStackNavigator(
@@ -126,6 +145,7 @@ SettingsStack.path = '';
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   LinksStack,
+  LinksStack2,
   WebStack,
   SettingsStack,
   RSSStack,
