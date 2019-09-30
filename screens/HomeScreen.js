@@ -30,14 +30,21 @@ export default function HomeScreen() {
         </View>
 
         <View style={styles.getStartedContainer}>
-          <DevelopmentModeNotice />
+          {/* <DevelopmentModeNotice /> */}
 
-          <Text style={styles.getStartedText}>Get started by opening</Text>
+          <Text style={styles.getStartedText}>To do
 
-          <View
-            style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-            <MonoText>screens/HomeScreen.js</MonoText>
-          </View>
+          How to input data
+          how to store it
+          how to read it back from storage
+
+          how to add tab nav to a blank app? i.e add to the royal news app
+
+          demo a map api demo to show where i am
+          
+          api demos with fetch
+          </Text>
+
 
           <Text>
           This is the basic demo app created by react native when you start 
