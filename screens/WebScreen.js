@@ -3,6 +3,10 @@ import { View,WebView,ScrollView, StyleSheet } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 
 export default function WebScreen() {
+
+  state={
+    homeUrl:'http://news.irishbloke.net/'
+  }
   return (
     <View style={styles.container}>
       {/**
@@ -12,7 +16,7 @@ export default function WebScreen() {
       
          <WebView
          source = {{ uri:
-         'https://www.google.com/' }}
+         this.state.homeUrl }}
          />
       
     </View>

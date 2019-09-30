@@ -1,6 +1,9 @@
 import React from 'react';
 import { Linking,Image,Text,ScrollView, StyleSheet } from 'react-native';
 
+//importing an image as object
+import kellyImage1 from '../img/1.jpg';
+
 import MyImages from './MyImages';
 export default function ImageScreen() {
     state = {
@@ -14,6 +17,8 @@ export default function ImageScreen() {
 
   return (
     <ScrollView style={styles.container}>
+
+      <Image source={kellyImage1} style={styles.myImage2}/>
      
       <Text>
         Image screen
@@ -85,5 +90,9 @@ const styles = StyleSheet.create({
   myImage:{
     width:100,
     height:100
+  },
+  myImage2:{
+    width:200,
+    height:200
   }
 });
